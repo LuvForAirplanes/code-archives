@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Pronect.DeviceServer.API/Pronect.DeviceServer.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        },
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/Pronect.DeviceServer.API/Pronect.DeviceServer.API.csproj"
+            ],
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}

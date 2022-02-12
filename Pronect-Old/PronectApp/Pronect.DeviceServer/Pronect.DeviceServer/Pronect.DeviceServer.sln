@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronect.DeviceServer.API", "Pronect.DeviceServer.API\Pronect.DeviceServer.API.csproj", "{86D38611-EDFD-4E14-9BF0-E46619C3B493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronect.DeviceServer.DbContext", "Pronect.DeviceServer.DbContext\Pronect.DeviceServer.DbContext.csproj", "{79D55484-251B-45F1-9896-1DD776BD27DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86D38611-EDFD-4E14-9BF0-E46619C3B493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D38611-EDFD-4E14-9BF0-E46619C3B493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D38611-EDFD-4E14-9BF0-E46619C3B493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D38611-EDFD-4E14-9BF0-E46619C3B493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79D55484-251B-45F1-9896-1DD776BD27DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79D55484-251B-45F1-9896-1DD776BD27DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79D55484-251B-45F1-9896-1DD776BD27DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79D55484-251B-45F1-9896-1DD776BD27DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {618952D3-5713-4933-A3C6-6403D2085B33}
+	EndGlobalSection
+EndGlobal

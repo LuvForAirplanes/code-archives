@@ -1,0 +1,240 @@
+﻿@page
+@using TruckEx.Services
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .menu-item {
+        padding-left: 20px;
+        display: inline-block;
+    }
+
+    .drive {
+        padding: 10px;
+    }
+
+    .spacer {
+        height: 6px;
+        background-color: white;
+    }
+
+    .direction-spacing {
+        width: 58%;
+        text-align: center;
+    }
+
+    .br-spacing {
+        height: 100%;
+        width: 100px;
+    }
+
+    #output {
+        height: 200px;
+        width: 400px;
+    }
+
+    .drive-button {
+        height: 180px;
+        background-color: gray;
+        border-radius: 15px;
+    }
+
+    .is-active {
+        background-color: red;
+    }
+
+    /*
+        Shadow:
+        -moz-box-shadow: 0 0 30px 15px #999;
+        -webkit-box-shadow: 0 0 30px 15px #999;
+
+        
+        -moz-box-shadow: 0 0 30px 10px #e61c1c;
+        -webkit-box-shadow: 0 0 30px 10px #e61c1c;
+    */
+</style>
+
+<br />
+<form method="post">
+    <div class="row">
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">Operate</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4 drive">
+                            <button type="submit" asp-page-handler="drive" asp-route-command="forward" class="col-sm-12 drive-button @(Model.TruckState.Drive == DriveDirection.Forward ? "is-active" : "")"></button>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 drive">
+                            <button type="submit" asp-page-handler="drive" asp-route-command="left" class="col-sm-12 drive-button @(Model.TruckState.Steering == TurnDirection.Left ? "is-active" : "")"></button>
+                        </div>
+                        <div class="col-sm-4 drive">
+                            <button type="submit" asp-page-handler="drive" asp-route-command="stop" class="col-sm-12 drive-button @(Model.TruckState.Drive == DriveDirection.Stopped ? "is-active" : "")"></button>
+                        </div>
+                        <div class="col-sm-4 drive">
+                            <button type="submit" asp-page-handler="drive" asp-route-command="right" class="col-sm-12 drive-button @(Model.TruckState.Steering == TurnDirection.Right ? "is-active" : "")"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4 drive">
+                            <button type="submit" asp-page-handler="drive" asp-route-command="reverse" class="col-sm-12 drive-button @(Model.TruckState.Drive == DriveDirection.Reverse ? "is-active" : "")"></button>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">Control</div>
+                <div class="panel-body">
+                    <button class="btn alert-warning" style="width:100px;">Horn</button>
+                    <button class="btn alert-danger" style="width:100px;" title="Hazard Lights" id="hazard-button"><span class="glyphicon glyphicon-warning-sign"></span></button>
+                    <div class="btn-group">
+                        <button type="button" class="btn" id="light-toggle" onclick="lightBox()">Lights On/Off</button>
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="menu-item">Front Lights:</li>
+                            <li><a href="#">Blink</a></li>
+                            <li><a href="#">Rapid Blink</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="menu-item">Back Lights:</li>
+                            <li><a href="#">Blink</a></li>
+                            <li><a href="#">Rapid Blink</a></li>
+                        </ul>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="btn-group btn-group-justified drive-options" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" onclick="highlightWheelDrive(event)" id="all-wheel-drive">All Wheel Drive</button>
+                        </div>
+                        <div class="btn-group" role="group" onload="onLoad">
+                            <button type="button" class="btn btn-default" onclick="highlightWheelDrive(event)" id="front-wheel-drive">Front Wheel Drive</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default" onclick="highlightWheelDrive(event)" id="back-wheel-drive">Back Wheel Drive</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Tasks</div>
+                <div class="panel-body">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script>
+    function ControlEnter(e) {
+        var target = e.target.id;
+        switch (target) {
+            case "forward":
+                CreateRequest("forward");
+                break;
+            case "left-forward":
+                break;
+            case "left-backward":
+                break;
+            case "right-forward":
+                break;
+            case "right-backward":
+                break;
+            case "backward":
+                CreateRequest("reverse");
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    function ControlExit(e) {
+        var target = e.target.id;
+        switch (target) {
+            case "forward":
+                CreateRequest("forward");
+                break;
+            case "left-forward":
+                break;
+            case "left-backward":
+                break;
+            case "right-forward":
+                break;
+            case "right-backward":
+                break;
+            case "backward":
+                CreateRequest("backward");
+                break;
+            default:
+                break;
+        }
+
+    }
+
+    function CreateRequest(command) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", "/api/Drive/" + command, false); // false for synchronous request
+        xmlHttp.send(null);
+        document.getElementById("output").value = xmlHttp.responseText + "\n";
+        return xmlHttp.responseText;
+    }
+
+    function onLoad() {
+        document.getElementById("all-wheel-drive").style.backgroundColor = "#ADADAD";
+
+    }
+
+    function lightBox() {
+        var lightToggle = document.getElementById("light-toggle").innerText;
+        if (lightToggle == "Lights ON") {
+            CreateRequest("frontlightsoff");
+            lightToggle = "Lights On/Off";
+
+        } else {
+            CreateRequest("frontlightson");
+            lightToggle = "Lights ON";
+
+        }
+        document.getElementById("light-toggle").innerText = lightToggle;
+    }
+
+    function highlightWheelDrive(e) {
+        var option = e.target.id;
+        var optionElement = document.getElementById(option);
+        var allWheelDrive = document.getElementById("all-wheel-drive");
+        var backWheelDrive = document.getElementById("back-wheel-drive");
+        var frontWheelDrive = document.getElementById("front-wheel-drive");
+
+        if (option == "all-wheel-drive") {
+            backWheelDrive.style.backgroundColor = "white";
+            frontWheelDrive.style.backgroundColor = "white";
+            optionElement.style.backgroundColor = "#ADADAD";
+
+        } else if (option == "back-wheel-drive") {
+            allWheelDrive.style.backgroundColor = "white";
+            frontWheelDrive.style.backgroundColor = "white";
+            optionElement.style.backgroundColor = "#ADADAD";
+
+        } else if (option == "front-wheel-drive") {
+            allWheelDrive.style.backgroundColor = "white";
+            backWheelDrive.style.backgroundColor = "white";
+            optionElement.style.backgroundColor = "#ADADAD";
+
+        }
+
+    }
+</script>

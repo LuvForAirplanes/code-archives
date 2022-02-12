@@ -1,0 +1,26 @@
+﻿<Window x:Class="Pronect_QuickSupport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pronect_QuickSupport"
+        mc:Ignorable="d"
+        Title="Pronect QuickSupport" Height="369.756" Width="255.078" ResizeMode="NoResize">
+    <Grid>
+        <TextBox x:Name="idField" HorizontalAlignment="Left" Height="39" TextWrapping="Wrap" Text="475 283 492" VerticalAlignment="Top" Width="144" Margin="81,187,0,0" BorderBrush="{x:Null}" FontSize="24" Foreground="#FF86868A" IsReadOnly="True" Background="{x:Null}"/>
+        <TextBox x:Name="idField_Copy" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" Text="gh7d4q" VerticalAlignment="Top" Width="96" Margin="129,227,0,0" BorderBrush="{x:Null}" FontSize="24" Foreground="#FF86868A" IsReadOnly="True" Background="{x:Null}"/>
+        <Button Content="Cancel" HorizontalAlignment="Left" Height="24" Margin="142,299,0,0" VerticalAlignment="Top" Width="83" RenderTransformOrigin="-0.118,0.652" BorderBrush="#FFBFBFC1" Click="Button_Click"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,299,0,0" Width="109" Foreground="#FF005BFF" Cursor="Hand">
+            <TextBlock x:Name="pronectWebLink" TextDecorations="Underline" MouseDown="PronectWebLink_MouseDown">www.pronect.com</TextBlock>
+        </Label>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="10,224,0,0" Stroke="#FF86868A" VerticalAlignment="Top" Width="215"/>
+        <Label Content="Id" HorizontalAlignment="Left" Height="35" Margin="10,184,0,0" VerticalAlignment="Top" Width="28" FontSize="20" Foreground="White" Background="#FFDDDDDD"/>
+        <Label Content="Pass" HorizontalAlignment="Left" Height="35" Margin="10,230,0,0" VerticalAlignment="Top" Width="47" FontSize="20" Foreground="White" Background="#FFDDDDDD"/>
+        <Rectangle HorizontalAlignment="Left" Height="98" Margin="0,0,-0.2,0" VerticalAlignment="Top" Width="249"  MouseDown="Rectangle_MouseDown" Cursor="Hand">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="C:\Users\Micah\Pictures\abcs1.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Please give the following information&#xD;&#xA;to the support technician with whom &#xD;&#xA;you are talking." VerticalAlignment="Top" Margin="10,108,0,0" Height="65" HorizontalAlignment="Left" Width="229" Foreground="#FF86868A"/>
+    </Grid>
+</Window>

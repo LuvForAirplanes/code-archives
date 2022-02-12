@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronect.Website", "Pronect.Website\Pronect.Website.csproj", "{7141270D-70D1-4E56-B276-B0BF3D2BB11F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pronect.Website.DbContext", "Pronect.Website.DbContext\Pronect.Website.DbContext.csproj", "{7682E533-0997-4995-89C7-237C0206B532}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7141270D-70D1-4E56-B276-B0BF3D2BB11F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7141270D-70D1-4E56-B276-B0BF3D2BB11F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7141270D-70D1-4E56-B276-B0BF3D2BB11F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7141270D-70D1-4E56-B276-B0BF3D2BB11F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7682E533-0997-4995-89C7-237C0206B532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7682E533-0997-4995-89C7-237C0206B532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7682E533-0997-4995-89C7-237C0206B532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7682E533-0997-4995-89C7-237C0206B532}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E691AD3D-E7CF-4161-9A14-90D0E46E0BAB}
+	EndGlobalSection
+EndGlobal
