@@ -1,0 +1,17 @@
+Math.abs() -- alert(Math.abs(TheNumber)); - translates a negative to a positive - example: -3 to 3
+
+Math.max() -- variable = Math.max(21, 22, 66, 45, 65);
+
+Math.min() -- variable = Math.min(21, 22, 67);
+
+Math.ceil() --alert(Math.ceil(NumberToRoundUp));
+
+Math.floor(NumberToRoundDown)
+
+Math.round(NumberToRoundUpOrDown)
+
+Math.pow(Number1, Number2) - Raise a number to their powers -- example: 2 x 8, would be: 2 x 2 x 2 x 2 x 2 x 2 x 2 x 2
+
+Math.toFix(NumberToFix) - Rounds up a number then removes the specified decimal points.
+
+Math.random()

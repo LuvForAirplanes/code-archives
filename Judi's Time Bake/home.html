@@ -1,0 +1,112 @@
+<DOCTYPE html>
+  <head>
+    <title>Judi's Time Bake</title>
+  </head>
+  <body onload="pageLoad();">
+    <input id="mainInput" onkeyup="return myKeyPress(event)" value="" type="text"/>
+    <audio id="bakeTemp" >
+      <source src="bakeTemp.wav"type="audio/wav"/>
+    </audio>
+    <audio id="bakeTimeout">
+      <source src="bakeTimeout.wav" type="audio/wav"/>
+    </audio>
+    <audio id="bakeDuration">
+      <source src="bakeDuration.wav" type="audio/wav"/>
+    </audio>
+    <audio id=set>
+      <source src=ovenSet.wav type="audio/wav" />
+    </audio>
+    <audio id="ovenStart">
+      <source src=ovenStart.wav  type="audio/wav"/>
+    </audio>
+    <audio id=ovenStop>
+      <source src=ovenStop.wav type="audio/wav"/>
+    </audio>
+    <iframe src"=BeagleBoard_org - bone101.html" >
+
+    </iframe>
+    <script>
+      var activated = false;
+      var bakeTemp = "";
+      var bakeStart = "";
+      var bakeDuration = "";
+        var sets = false;
+
+      function pageLoad() {
+        document.getElementById("mainInput").focus();
+      }
+      function myKeyPress(e) {
+        var key;
+        if(e.which) {
+          key = String.fromCharCode(e.which);
+        }
+        if(activated == true && (bakeTemp == "" || bakeTemp.charAt(0) == "" || bakeTemp.charAt(1) == "" || bakeTemp.charAt(2) == "")) {
+          bakeTemp += key;
+          document.getElementById("mainInput").value = "";
+          if(bakeTemp.charAt(2) != "") {
+            var bakeTimeouts = document.getElementById("bakeTimeout");
+          bakeTimeouts.load();
+          bakeTimeouts.play();
+          }
+        } else if(key == "1" && activated == false) {
+        activated = true;
+        var bakeTemps = document.getElementById("bakeTemp");
+        document.getElementById("mainInput").value = "";
+        bakeTemps.load();
+        bakeTemps.play();
+        } else {
+          if(sets == false) {
+          setTimeout(int1, 3000);
+          setTimeout(int2, 9000);
+          sets = true;
+          }
+        }
+        function int1() {
+          bakeStart = document.getElementById("mainInput").value;
+        document.getElementById("mainInput").value = "";
+        var bakeDurations = document.getElementById("bakeDuration");
+        bakeDurations.load();
+        bakeDurations.play();
+        }
+        function int2() {
+          bakeDuration = document.getElementById("mainInput").value;
+        document.getElementById("mainInput").value = "";
+        var ovenSet = document.getElementById("set");
+        ovenSet.load();
+        ovenSet.play();
+        setTime(bakeStart, bakeDuration, bakeTemp);
+        }
+      }
+
+      function setTime(bakeStart, bakeDuration, bakeTemp) {
+        var time1 = parseInt(bakeStart) * 60000;
+        var time2 = parseInt(bakeStart) + parseInt(bakeDuration);
+        time2 = time2 * 60000;
+        var tim1 = setTimeout(bake, time1);
+        var tim2 = setTimeout(stopBake, time2);
+        activated = false;
+        bakeDuration = "";
+        bakeStart = "";
+        sets = false;
+      }
+      function bake(bakeTemp) {
+        alert("start");
+        var code = "";
+        var ovenStart = document.getElementById("ovenStart");
+        ovenStart.load();
+        ovenStart.play();
+        bakeTemp = "";
+        alert("Start! Now!");
+      }
+      function stopBake() {
+        alert("stop");
+        var ovenSet = document.getElementById("ovenStop");
+        ovenSet.load();
+        ovenSet.play();
+        var code = "";
+        alert("Stop! Now!");
+        location.reload();
+      }
+    </script>
+  </body>
+</DOCTYPE>

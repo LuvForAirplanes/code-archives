@@ -1,0 +1,9 @@
+There are two ways to detected features in the browser:
+Feature Detection:
+if (featureName) {
+//Code goes here
+}
+
+Browser Sniffing:
+Use feature detection most oif the time because they may falsely indentify themselves as a more common browser, its format in
+which it returns the value.

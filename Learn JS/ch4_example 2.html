@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <title>Chapter4. Example 2</title>
+    </head>
+    <body>
+        <script>
+        //Centigrade conversion
+            function toCentigrade(degFahren) {
+                var degCent = 5/9 * (degFahren - 32);
+
+                document.write(degFahren +  " Fahrenheit is " + degCent + " Celsius.<br/>");
+            }
+            //fahrenheit conversion
+            function toFahrenheit(degCent) {
+                var degFahren = 9/5 * degCent + 32;
+
+                document.write(degCent + "Celsius is " + degFahren + " fahrenheit.<br/>");
+            }
+            //actual conversion has two parameters-converter and temperature
+            function convert(converter, temperature) {
+                //uses converter as a function with temperature as the return value
+                return converter(temperature);
+            }
+            convert(toFahrenheit, 23);
+            convert(toCentigrade, 75);
+            </script>
+    </body>
+</html>

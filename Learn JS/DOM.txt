@@ -1,0 +1,49 @@
+Document Object Model:
+DOM accesses only the document, unlike BOM who can access the entire browser(Browser Object Model)
+Level 2-most features are in todays browsers
+Level 3-2004
+Level 4-as of 2014, no browsers support it
+
+document.
+getElementById
+getElementByTagName("p").item(0)
+querySelector(".className elementName") - returns the first CSS element that matches the specifications
+querySelectorAll(".className elementName") - returns the set of CSS element that matches the specifications
+
+creating elements & text:
+createElement("elementName")
+createTextNode("text")
+
+documentElement;
+ element object:
+documentElement - returns the documents main element (<html>)
+(e.g. var container = document.documentElement;  alert(container.tagName))
+tagName - gets the elements tag name
+getAttribute(attributeName) - gets the value of an attribute
+setAttribute(attributeName) - sets an attribute with the speciifed value
+removeAttribute(attributeName) - removes the attribute and its value from the element
+|
+firstChild
+lastchild
+previousSibling
+nextSibling
+ownerDocument
+parentNode
+nodeName
+nodeValue
+nodeType
+ (e.g.| var headElement = htmlElement.firstChild; alert(headElement))
+|
+appendChild(newNode) - create an new node under a parent
+cloneNode(clonechildren) - 
+hasChildNodes()
+insertBefore(newNode, referanceNode)
+removeChild(childNode)
+
+e.dataTransfer.setData("type", "text") - stores data to the element; argument 1: type of data, text, url; argument 2: actual data
+e.dataTransfer.getData("text") - get the data
+????????????????????????????????????????????????????
+NamedNodeMap- gets a map of all the nodes in the document
+Node - each element in the doc. has its own node element
+NodeList - list of node objects
+?????????????????????????????????????????????????????

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Connecting events using HTML Attributes</title>
+        </head>
+        <body>
+            <!--This doesn't work-->
+            <img src="1.png" id="img1"/>
+            <img src="2.png" id="img2"/>
+
+            <script>
+               var myImages = [
+                   "1.png",
+                   "2.png",
+                   "3.png"
+               ];
+
+               function changeImg(e) {
+                   var el = e.target
+                   var newImgNumber = Math.round(Math.random() * 3);
+
+                   while(el.src.indexOf(myImages[newImgNumber]) != -1) {
+                       newImgNumber = Math.round(Math.random() * 3);
+                   }
+
+                   el.src = myImages[newImgNumber];
+               }
+               document.getElementById("img1").onClick = changeImg;
+               document.getElementById("img2").onClick = changeImg;
+            </script>
+        </body>
+</html>

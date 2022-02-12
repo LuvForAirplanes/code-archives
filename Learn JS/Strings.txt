@@ -1,0 +1,67 @@
+Matches for RegExp:
+G - global
+I - case-sensitive
+M - multiline flag; characters $ and ^ can be the beginning and end of a search
+
+Regualar Expressions:
+\d  Any digit from 0-9
+\D any character that is not a digit
+\w Any word character a-z, A-Z, 0-9
+\W any nonword character
+\s any white space charater-tab, space, enter, etc.
+\S any nonwhitespace character
+.  any other than the newline character
+[...] anthing inside the brackets
+[^...] anything other than not what is in the brackets
+
+Repetition Characters:
+{n} matches n of the previous number-x matches xx
+{n,} matches n or more of the previous item
+{n,m} 
+? Matches the previous item zero or one
++ matches the previous item one or more times
+* matches the previous item zero or more times
+
+Position charaters:
+^ - start at the begining of the string
+$ - must start at the end of the line
+\b - marks a word boundry, which is usually between a word character and a non-word character
+\B - matches a position thats not a word boundary
+
+/r - carriage turn
+/n - line feed
+
+substr(BeginningCharacterToClip, EndCharacter)-clips a string out of a string 
+
+substring(BeginningCharacterToClip, CharactersAfterBeginningCharacter)-{see above} 
+
+toLowerCase() 
+
+toUpperCase() 
+
+charAt(CharacterIndexNumber)-gets a character from the specified index in a string
+ 
+charCodeAt(CharacterIndexNumber)-gets the character code from the specified index in a string
+
+CharCode(CharacterCode)-converts the specified character code to a unicode character 
+
+trim()-trims trailing white spaces from the begining and end of a string
+
+indexOf(WhatToFind, WhereToStartSearching)-searches for a string within another string starting from the Left-hand-side 
+
+lastIndexOf(WhatToFind, WhereToStartSearching)-searches for a string within another string starting from the right-hand side 
+
+StringToSplit.split(WhatToRemove) - Replaces every character in a string with the specified character
+
+String = parseInt(NumberToConvert) - converts string to number
+
+String = parseFloat(NumberToConvert) - converts string to number returning a floating point number
+
+String.split(NumberToReplace) - replaces the specified number
+
+String.replace(TextToFind, ReplacementText) - finds and replaces the specified string with the second parameter
+
+String.search(WhatToFind) - finds the first occurance of text in a string
+
+String.match(StringToFind) - searches for a value within a string, then returns an array
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title></title>
+    <head>
+    <body>
+                <a id="someLink" href="somepage.html">
+            Click Me</a>_
+        <script src="event-utility.js"></script>
+         <script>
+var link = document.getElementById("somelink");
+//Great...Doesn't work :( - I suspect it s the imported script
+function linkClick(e) {
+    alert("This link is going nowhere");
+
+    evt.preventDefault(e);
+}
+evt.addListener(link, "click", linkClick);
+        </script>
+    </body>
+    </html>

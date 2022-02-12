@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 9,Example 5</title>
+        <style>
+                #divAdvert {
+                    position: absolute;
+                    font: 12px Arial;
+                    top: 4px;
+                    left: 0px
+            </style>
+        </head>
+        <body>
+            <div id="divAdvert" >
+                Here is an advertisement
+            </div>
+
+            <script>
+              var direction = 2;
+//modified in question 2
+              function doAnimation() {
+                    var divAdvert = document.getElementById("divAdvert");
+                    var currentLeft = divAdvert.offsetLeft
+
+                    if(currentLeft > 400 || currentLeft < 0) {
+                        direction = -direction;
+                    }
+
+                    var newLocation = currentLeft + direction;
+
+                    divAdvert.style.left = newLocation + "px";
+              }
+              setInterval(doAnimation, 50);
+            </script>
+        </body>
+</html>

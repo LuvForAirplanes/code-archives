@@ -1,0 +1,5 @@
+Math:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+
+SMTP RFC:
+www.ietf.org/rfc/rfc0821.txt

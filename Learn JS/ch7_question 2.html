@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 7, Example 2</title>
+    </head>
+
+    <body>
+        <div id="output"></div>
+        <script>
+            //Desont work
+           function updateTime() {
+               var d = new Date();
+               document.getElementById("output").innerHTML = d.getHours() + "<br/>" + d.getMinutes() + "<br/>" + d.getSeconds()
+           }
+           setInterval(updateTime, 1000)
+        </script>
+    </body>
+</html>

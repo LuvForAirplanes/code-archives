@@ -1,0 +1,43 @@
+
+-Referance TYpes Objects:
+JavaScript does not support classes as objects
+Objects consist of:
+- - - - - - - - - - - -
+A Constructor     -a function that is called every time one of your objects based on this referance type is created
+Method Definitions-
+Properties	  -
+
+USE UPPER CASE LETTERS TO DEFINE REFERANCE TYPES!!!-It makes access to referance types easy
+
+defining A Referance type
+1.Create Constructor:
+function.person(firstName, lastName) {
+this.firstName = firstName;
+this.lastName = lastName;
+}
+
+ObjectName.prototype
+####################################################################################################################
+-Custom objects:
+You can create new objects without telling JS directly; simply type: myObject.NewThing = "Value"
+One drawback, if you misspell JS wont tell you, it'll simply create a new property
+
+var myObject = {};
+myObject.first = "Micah";
+myObject.last = "Stauffer";
+
+-or-
+
+var myObject = {
+first:"Micah",
+last:"Doe",
+greet:function() {
+alert("My name is " + 
+this.first = " " +
+this.last;
+}
+};
+
+Assign a function:
+myObject.greet - function() {
+alert("My name is " + this.first + " " + this.last;

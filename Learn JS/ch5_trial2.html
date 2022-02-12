@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Chapter 5, Example 5</title>
+</head>
+
+<body>
+    <script>
+            var numbers = [1, 2, 3, 4, 5];
+
+            function doubleAndReturn(value, index, array) {
+                var result = value * 2;
+                return result;
+            }
+                var doubledNumbers = numbers.map(doubleAndReturn);
+                alert("The doubled numbers are: " + doubledNumbers);
+        </script>
+</body>
+
+</html>

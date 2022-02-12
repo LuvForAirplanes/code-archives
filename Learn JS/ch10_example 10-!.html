@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 10, example 10</title>
+        <style>
+        .tabStrip {
+            background-color: #E4E2D5;
+            padding: 3px;
+            height: 22px;
+        }
+        .tabStrip div {
+            float: left;
+            font: 14px arial;
+            cursor: pointer;
+        }
+        .tabStrip-tab {
+            padding: 3px;
+        }
+        .tabStrip-tab-hover {
+            border: 1px solid #316AC5;
+            background-color: #C1D2EE;
+            padding: 2px
+        }
+        tabStrip-tab-click {
+            border: 1px solid #facc5a;
+            background-color: #f9e391;
+            padding: 3px;
+        }
+        </style>
+    </head>
+    <body>
+        <a id="somelink" href="somepage.html">Click Me</a>
+        <div id="descContainer"></div>
+        <script>
+            var link = document.getElementById("somelink");
+
+                function linkClick(e) {
+               var target = e.target;
+
+               alert("This link is going no where");
+
+               e.returnValue = false;
+
+                }
+                link.attachEvent("onclick", linkClick);
+        </script>
+    </body>
+</html>

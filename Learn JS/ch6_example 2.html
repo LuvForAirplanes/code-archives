@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Chapter 6, Example 2</title>
+</head>
+
+<body>
+    <script>
+       var input = prompt("Please enter a pass here.", "");
+
+       function isValidInput(text) {
+           var myRegExp = /[^a-z\d ]/i;
+           return !(myRegExp.test(text));
+       }
+       if(isValidInput(input)) {
+           alert("Your pass phrase contains only valid characters");
+       } else {
+           alert("Your passphrase contains one or more invalid characters");
+       }
+        </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+Two Types of timers:
+one-shot timers
+continually firing timers
+
+Oneshot timers:
+Declaration-var timerID = setTimeout(yourFunction, millisecondsDelay); - or - timerID(function, milliseconds);
+when a timer is declared the second way it can not be accessed by the code
+clearTimeout(timerID);
+
+
+
+continually Firing timers:
+Declaration-var timerID = setInterval(yourFunction, milliseconds); - or - timerID(function, milliseconds);
+clearInterval(timerID);

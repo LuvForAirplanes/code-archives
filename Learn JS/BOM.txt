@@ -1,0 +1,47 @@
+Browser Object Model
+history object:
+back(NumOfPagesToGoBack) - navigates backward in the browser
+forward(NumOfPagesToGoForward) - navigates forward in the browser
+go(WhereToGo) - goes forward or backward using negative or positive numbers -- go(3) -or- go(-3)
+//
+location:
+href(PageToNavigateTo) - loads the specified page and adds it to the history stack -- location.href = "myPage.html"
+replace(PageToReplaceAndNavigateTo) - replaces the current page with the speciifed page, not adding it to the history stack location.replace("myPage.html")
+//
+navigator:
+geoLocation-geoLocation can get the devices latitude, longitude, altitude, and speed, the function is shown below:
+function success(position) {
+var ctds = position.coords;
+
+var latitude = crds.latitude;
+var longitude = crds.longitude;
+var altitude = crds.altitude;
+var speed = crds.speed;
+}
+
+navigator.geoLocation.getCurrentPosition(success, errorFunctioName)
+
+message is another property, returns a human readable string about the error - alert(errorFunctionParameter.message);
+
+Error Codes:
+1 - permission not granted to access information
+2 - An internal error occured
+3 - the retrievel time limit was reached before data was gathered
+//
+screen:
+screen.height
+screen.width
+screen.colorDepth
+
+document:
+document.write(TextToWrite)
+document.bgColor()
+.getElementById("id").onclick = function
+
+document.images[imageIndexNum].property; - accesses an image, imageIndexNum accesses them in order the were created, starting with 0
+can be used on any element
+document.images.length - gets the number of images on a page, startiing with the index of 0
+
+navigator:
+navigator.userAgent - gets the information about the browser, hard to use because every browser returns it in their own format
+navigator.appName - gets the name of the browser that your script is running on

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 7, Example 2</title>
+    </head>
+
+    <body>
+        <div id="output"></div>
+        <script>
+           var dateborn = prompt("Please neter the date you were born")
+           var myDate = new Date("9 November 2016")
+
+           myDate.setUTCDate(dateborn)
+           myDate.setUTCMonth(month)
+           myDate.setUTCFullYear(year)
+//Doesn't work
+           document.getElementById("output").innerHTML = (name + " is this old " + myDate.getTimezoneOffset)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+		
+		for...in
+for (var elementIndex in myArray) {
+document.write(myArray[elementIndex]) ;
+}
+
+		while loop
+while (degCent > 100) {
+//code goes here
+}
+
+		for...while
+vfor(loopCounter = 1; loopCounter <= 3; loopCounter++) {
+}
+
+
+		do while
+do {
+      userAge = prompt("Please enter your age", "")
+} while (isNaN(userAge) == true);
+
+if (string.indexOf("Micah") >= 0) {
+//code goes here
+}
+
+		Operators
+== means "is the LHS equal to the RHS?"
+!=  means "is the LHS not equal the RHS?"
+<= means "is the LHS less than or equal to the RHS?"
+>= means "is the LHS greater than or equal to the RHS?"
+<   means "is the LHS less than the RHS?"
+>   means "is the LHS greater than the the RHS?"
+
+		Truthy & Falsey
+Example of T & F:
+if (featureName) {
+//Code goes here
+}
+
+following values are falsey:
+0
+"" (empty string)
+null
+undefined
+[] (empty array]
+false
+just about everything else is truthy
+
+developers use this method more:
+if (typeof featureName != "undefined") {
+//Code goes here
+}
+
+typeof can be used in the following values:
+statement-result
+typeof 1-number
+typeof "hello"-string
+typeof true-boolean
+typeof [] (array)-object
+typeof {} (any object)-object
+typeof undefined-endefined
+typeof null-object
+

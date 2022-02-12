@@ -1,0 +1,28 @@
+push(ValueToAdd)-adds a value to an array 
+
+concat() -- array1.concat(array2) - joins two arrays 
+
+slice(IndexOfFirstNumber, IndexOfLastNumber)-Copy's part of an array 
+
+ArrayName.join("<br/>")-converts an array to a string 
+
+ArrayName.sort()
+
+this.PropertyName - refers to an objects property assigned to a function -- var micah{first, last}; micah = function(s1, s2);
+this.first = s1;
+
+ArrayName.reverse() 
+
+ArrayName.indexOf("red"); - locates the first occurence of an array value(returns a string)
+
+ArrayName.lastIndexOf("blue"); - locates the last occurance of an array value(returns a string)
+
+Every() -- alert(ArrayName.every(TestName)); - checks to make sure all the array values meet the test requirements
+
+Some() -- alert(ArrayName.some(TestName)); - checks to make sure some the array values meet the test requirements
+
+Filter() -- result = ArrayName.filter(TestName)  -  filters and retrieves all the array values that are meeting th test requirements
+
+forEach() -- ArrayName.forEach(OperationName);  -  does an operation for each item in an array
+
+ObjectName.greet(Avalue)

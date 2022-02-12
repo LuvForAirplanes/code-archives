@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var numbers = [1, 2, 3, 4, 5];
+
+            function isLessThan3(value, index, array) {
+                var returnValue = false;
+
+                if (value <3) {
+                    returnValue = true;
+                }
+                return returnValue;
+            }
+            alert(numbers.every(isLessThan3));
+        </script>
+    </body>
+</html>

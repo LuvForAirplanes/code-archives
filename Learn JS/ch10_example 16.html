@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <style>
+            .underline {
+                color: red;
+                text-decoration: underline;
+            }
+            </style>
+        <title></title>
+    <head>
+    <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+        <script src="event-utility.js"></script>
+         <script>
+             function handleEvent(e) {
+                 var target = evt.getTarget(e);
+                 var type = e.type;
+
+                 if(type == "click") {
+                     alert("you clicked the mouse button at the X:" + e.clientX + " and Y:" + e.clientY + " coordinates");
+                 }
+             }
+             evt.addListener(document, "mouseover", handleEvent);
+             evt.addListener(document, "mouseout", handleEvent);
+             evt.addListener(document, "mouseclick", handleEvent);
+        </script>
+    </body>
+    </html>

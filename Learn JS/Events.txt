@@ -1,0 +1,25 @@
+<a href="somepage.html" onclick="alert('Micah')">Click ghere</a>
+
+<a href="somepage.html" onclick="function1(that)">Click ghere</a>
+function function1(that) {
+that.href = "";
+}
+If the function return FALSE, normal execution for the <a> attribute will be cancelled-some objects dont have a return value, they ignore it
+
+<a href="somepage.html" onclick="function1(event)">Click here</a>
+function function1(e) {
+var el = e.target;
+el.href = "";
+}
+
+removing an event from a control: element.onclick = null;
+
+item.addEventListener("mouseclick", functionName);
+
+old way:
+function(e) {
+var el = e.srcElement;
+item.attachEvent("onclick", function);
+item.detachEvent(SeeAbove)
+
+type property skips the "on" prefix: "mouseout"

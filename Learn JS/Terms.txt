@@ -1,0 +1,6 @@
+primitive data-most simple data in JavaScript
+object data-more complicated data that is declared using the new keyword
+referance Type-templates for an object
+literal notation-assign values to properties using colons. e.g. micah = {first:"Micah" last:"Stauffer" age:"12"}
+anynomous function-a function without a name-usually assigned to a variable
+RegExp-Regular Expressions

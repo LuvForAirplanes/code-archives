@@ -1,0 +1,81 @@
+getDate() - Gets the day of the month
+
+getDay() - Gets the day of the week starting with index number 0
+
+getMonth() - Gets the month of the year starting with index number 0.
+
+getFullYear() - Gets the full year as a four-digit number.
+
+getHours(Hour) - gets the current hour in the 24 hr format starting at the index of 0
+
+getMinutes(Minutes) - gets the current minutes starting at the index of 1
+
+getSeconds(Seconds) - gets the current seconds starting at the index of 1
+
+getMilliseconds(Milliseconds) - gets the current milliseconds
+
+setDate(TheNewDate) - Sets a date value
+
+setMonth(TheNewMonth) - Sets a month value starting with index 0
+
+setFullYear(NewYear) - Sets a year value with a four-digit number
+
+setHours(Hours) - sets the hours starting with the index of 1
+
+setMinutes(Minutes) - sets the minutes starting with the index of 1
+
+setSeconds(Seconds)- sets the seconds starting with the index of 1
+
+setMilliseconds(Millisecond) - sets the milliseconds starting with the index of 1
+
+<UTC>
+setUTCDate(TheNewDate) - Sets a date value
+
+seUTCtMonth(TheNewMonth) - Sets a month value starting with index 0
+
+setUTCFullYear(NewYear) - Sets a year value with a four-digit number
+
+setUTCHours(Hours) - sets the hours starting with the index of 1
+
+setUTCMinutes(Minutes) - sets the minutes starting with the index of 1
+
+setUTCSeconds(Seconds)- sets the seconds starting with the index of 1
+
+setUTCMilliseconds(Millisecond) - sets the milliseconds starting with the index of 1
+
+getUTCDate() - Gets the UTC day of the month
+
+getUTCMonth() - Gets the UTC month of the year starting with index number 0.
+
+getUTCFullYear() - Gets the full UTC year as a four-digit number.
+
+getUTCHours(Hour) - gets the current UTC hour in the 24 hr format starting at the index of 0
+
+getUTCMinutes(Minutes) - gets the current UTC minutes starting at the index of 1
+
+getUTCSeconds(Seconds) - gets the current UTC seconds starting at the index of 1
+
+getUTCMilliseconds(Milliseconds) - gets the current UTC milliseconds
+</UTC>
+
+dateValueName.toUTCString() - retutns a string based on UTC time(scientific time)
+
+dateValueName.toLocaleString() - return a string based on locale time
+
+getTimezoneOffset() - gets the difference between two time zones
+
+toTimeString()
+
+toDateString() - Returns a human readable string.
+
+toLocaleTimeString()
+
+toTimeString()
+
+toLocaleDateString()
+
+toDateString()
+
+toUTCDay() - gets UTC day starting at 0(Sunday) an ending with 6(Saturday) 
+
+toISOString() - gets the formated date string-YYYY-MM-DDTHH:mm:ss.sssZ-Z signifise the UTC time zone

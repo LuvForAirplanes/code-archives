@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>Chapter 10, Example 15</title>
+</head>
+
+<body>
+    <img id="img0" src="1.png"/>
+    <div id="status"><div>
+
+    <script src="event-utility.js"></script>
+        <script>
+            var myImages = [
+                "1.png",
+                "2.png",
+                "3.png" 
+            ];
+
+            function changeImg(e) {
+                 var el = evt.getTarget(e);
+                 var newImgNumber = Math.round(Math.random() * 3);
+
+                 while (el.src.indexOf(myImages[newImgNumber]) != -1) {
+                     newImgNumber = Math.round(Math.random() * 3);
+                 }
+                 el.src = myImages[newImgNumber];
+            }
+            function updateStatus(e) {
+                var el = evt.getTarget(e);
+                var status = document.getElementById("status");
+
+                status.innerHTML = "The image changed to: " + el.src;
+                 if (el.src.indexOf("1") > -1) {
+                     evt.removeListener(imgObj, "click", chnageImg);
+                     evt.removeListener(el, "click", updateStatus);
+            }}
+            var imgObj = document.getElementById("img0");
+
+            evt.addListener(imgObj, "click", chnageImg);
+                     evt.addListener(el, "click", updateStatus);
+        </script>
+</body>
+</html>

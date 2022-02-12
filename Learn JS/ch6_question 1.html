@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <script>
+            //This doesn't work-not sure why
+            var myString = "This sentence has has a fault and and we need to fix it"
+            var myRegExp = new RegExp("(\\b\\w+\\b) \\1","g");
+             alert(myString.replace(myRegExp, "$1"))
+           
+        </script>
+    </body>
+</html>

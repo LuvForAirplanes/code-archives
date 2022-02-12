@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Chapter 10,example 7</title>
+    </head>
+    <body>
+        <img id="img0" scr="1.png"/>
+        <div id="status"></div>
+        <script>
+            var myImages = [
+                "1.png",
+                "2.png",
+                "3.png",
+                "4.png"
+            ];
+            function changeImg(e) {
+                var el = e.target;
+                var newImageNumber = Math.round(Math.random() * 3);
+
+                while(el.src.indexOf(myImages[newImgNumber]) != -1) {
+                    newImgNumber = Math.round(Math.random() * 3);
+                }
+                el.src = myImages[newImgNumber];
+            }
+
+            function updateStatus(e) { 
+                var el = e.target;
+                var status = document.getElementById("status");
+
+                status.innerHTML = "The image changed to: " + el.src;
+
+                if(el.src.indexOf("d1") > -1) {
+                    el.removeEventListener("click", changeImg);
+                    el.removeEventListener("click", updateStatus);
+                }
+            }
+
+            var imgObject = document.getElementById("img0");
+
+            imgObject.addEventListener("click", changeImg);
+            imgObject.addEventListener("click", updateStatus);
+            </script>
+    </body>
+</html>

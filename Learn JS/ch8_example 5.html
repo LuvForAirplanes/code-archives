@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Chapter 8, Example 3</title>
+    </head>
+    <body>
+        <script>
+            function getBrowserName() {
+                var lsBrowser = navigator.userAgent;
+                if(lsBrowser.indexOf("MSIE") >= 0) {
+                    return "MSIE";
+                } else if (lsBrowser.indexOf("Trident") >= 0) {
+                    return "MSIE";
+                } else if (lsBrowser.indexOf("Firefox") >= 0) {
+                    return "Firefox";
+                } else if (lsBrowser.indexOf("Chrome") >= 0) {
+                    return "Chrome";
+                } else if (lsBrowser.indexOf("Safari") >= 0) {
+                    return "Safari";
+                } else if (lsBrowser.indexOf("Opera") >= 0) {
+                    return "Opera";
+                } else {
+                    return "UNKNOWN";
+                }
+            }
+
+            function getBrowserVersion() {
+                var ua = navigator.userAgent;
+                var browser = getBrowserName();
+                var findIndex = ua.indexOf(browser) + browser.length + 1;
+                var browserVersion = parseFloat(ua.substring(findIndex, findIndex + 3));
+
+                return browserVersion;
+            }
+
+            var browserName = getBrowserName();
+            var browserVersion = getBrowserVersion();
+
+            if (browserName == "MSIE") {
+                if (browserVersion < 9) {
+                    document.write("Your version of IE is to old")
+                } else {
+                    document.write("Your version of IE is fully supported");
+                }
+            } else if (browserName == "Firefox") {
+                document.write("Firefox is fully supported")
+            } else if (browserName == "Safari") {
+                document.write("Sfari is fully suported")
+            } else if (browserName == "Chrome") {
+                docuemnt.write("Chrome is fully suported");
+            } else if (browserName  == "Opera") {
+                document.write("Opera is fully suported");
+            } else {
+                document.write("Sorry this browser is not supported");
+            }
+        </script>
+    </body>
+</html>

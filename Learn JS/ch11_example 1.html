@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head><title>Chapter 11, Example 1</title></head>
+    <body>
+        <form action="" name="form1">
+            <p>This is inside form 1</p>
+        </form>
+        <form action="" name="form2">
+            <p>This is inside form 2</p>
+        </form>
+        <form action="" name="form3">
+            <p>This is inside form 3</p>
+        </form>
+        <script>
+            var numberForms = document.forms.length;
+            for (var index = 0; index < numberForms; index++) {
+                alert(document.forms[index].name);
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+To check for features:
+if(addEventListener) {
+       //use addEventListener 
+} else {
+      // use attachEvent
+}
+
+always check for the more modern feature first, example:
+// wrong! Do not do!
+if(attachEvent) {
+      //use addEventListener 
+} else {
+     // addEventListener
+}
