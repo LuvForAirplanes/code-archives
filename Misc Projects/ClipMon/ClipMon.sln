@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClipMon", "..\..\..\..\AppData\Local\Temp\Temp1_RAD_ClipboardMonitorExampleSrc.zip\ClipMon.csproj", "{AF20E887-C7E5-4CC0-9FF2-3AFD8590BA70}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF20E887-C7E5-4CC0-9FF2-3AFD8590BA70}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{AF20E887-C7E5-4CC0-9FF2-3AFD8590BA70}.Debug|Default.Build.0 = Debug|Any CPU
+		{AF20E887-C7E5-4CC0-9FF2-3AFD8590BA70}.Release|Default.ActiveCfg = Release|Any CPU
+		{AF20E887-C7E5-4CC0-9FF2-3AFD8590BA70}.Release|Default.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {190CB04C-B721-4F4D-991A-799FFBDF57F7}
+	EndGlobalSection
+EndGlobal

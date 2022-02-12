@@ -1,0 +1,30 @@
+﻿<Window x:Class="QuickSupport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QuickSupport"
+        mc:Ignorable="d"
+        Title="QuickSupport for my Grandma" Height="270" Width="525">
+    <Grid>
+        <Label Content="Help!" HorizontalAlignment="Left" Height="35" Margin="222,2,0,0" VerticalAlignment="Top" Width="61" FontSize="20"/>
+        <Rectangle x:Name="pictureBox" MouseDown="pictureBox_MouseDown" HorizontalAlignment="Left" Height="100" Margin="41,92,0,0" Stroke="White" VerticalAlignment="Top" Width="140">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="C:\Users\Micah\Desktop\pictures.JPG" Stretch="Uniform"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle x:Name="otherBox" MouseDown="otherBox_MouseDown" HorizontalAlignment="Left" Height="100" Margin="331,92,0,0" Stroke="White" VerticalAlignment="Top" Width="140">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="C:\Users\Micah\Desktop\else.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="I need help with my..." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,45,0,0" Width="173" FontSize="14"/>
+        <TextBox x:Name="output" HorizontalAlignment="Left" Height="41" Margin="54,200,0,-0.2" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" IsReadOnly="True" BorderBrush="White" FontSize="16" FontFamily="Calibri" Text="Select the issue or support object above and wait for Micah's response..." TextChanged="output_TextChanged"/>
+        <Rectangle x:Name="errorBox" MouseDown="errorBox_MouseDown" HorizontalAlignment="Left" Height="100" Margin="186,91,0,0" Stroke="White" VerticalAlignment="Top" Width="140">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="C:\Users\Micah\Desktop\error.jpg"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>

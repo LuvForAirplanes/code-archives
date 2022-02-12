@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang=en >
+    <body>
+            <script>
+                var amount = parseInt(prompt("amount"));
+                alert(amount);
+                var tax  = parseInt(prompt("tax"));
+                var years = parseInt(prompt("years"));
+
+  var here = amount * tax * years
+                
+                
+                document.body.appendHTML("<p id=para >" + here + " </p>");
+                here = parseInt(document.getElementById("para"));
+var last = here.lastIndexOf(0);
+                alert(here.substring(last - 4, last));
+                </script>
+    </body>
+                </html>

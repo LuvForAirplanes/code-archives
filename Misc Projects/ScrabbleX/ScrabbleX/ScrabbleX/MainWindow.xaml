@@ -1,0 +1,68 @@
+﻿<Window x:Class="ScrabbleX.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScrabbleX"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="234.756" Width="385.254" Loaded="ScrabbleXLoaded">
+    <Grid>
+        <TextBox x:Name="letter1" HorizontalAlignment="Left" Height="37" Margin="33,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FFF92E0D" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter2" HorizontalAlignment="Left" Height="37" Margin="66,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FFFF5700" Background="White" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter3" HorizontalAlignment="Left" Height="37" Margin="99,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FFE7FF00" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter4" HorizontalAlignment="Left" Height="37" Margin="131,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FF0024FF" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter5" HorizontalAlignment="Left" Height="37" Margin="163,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FF70DB15" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter6" HorizontalAlignment="Left" Height="37" Margin="195,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FF673AB7" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter7" HorizontalAlignment="Left" Height="37" Margin="227,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FFE7FF00" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter8" HorizontalAlignment="Left" Height="37" Margin="261,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FFF92E0D" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter9" HorizontalAlignment="Left" Height="37" Margin="295,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FF70DB15" SelectionBrush="#FFF6170F"/>
+        <TextBox x:Name="letter10" HorizontalAlignment="Left" Height="37" Margin="328,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="A" FontSize="18" Foreground="#FF0024FF" SelectionBrush="#FFF6170F" MaxLines="1" MaxLength="1"/>
+        <TextBox x:Name="crossWise" HorizontalAlignment="Left" Height="37" Margin="119,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="B" FontSize="18" SelectionBrush="#FFF6170F">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF003B"/>
+                    <GradientStop Color="#FFF9FF00" Offset="0.518"/>
+                    <GradientStop Color="#FFFF7200" Offset="0.291"/>
+                    <GradientStop Color="#FF3EF50D" Offset="0.722"/>
+                    <GradientStop Color="#FF0201FF" Offset="0.899"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Label Content="across" HorizontalAlignment="Left" Margin="88,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.852"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="13" Margin="20,45,0,0" Stroke="White" VerticalAlignment="Top" Width="348"/>
+        <TextBox x:Name="length" HorizontalAlignment="Left" Height="37" Margin="245,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="13" Text="7" FontSize="18" SelectionBrush="#FFF6170F">
+            <TextBox.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFF003B"/>
+                    <GradientStop Color="#FFF9FF00" Offset="0.518"/>
+                    <GradientStop Color="#FFFF7200" Offset="0.291"/>
+                    <GradientStop Color="#FF3EF50D" Offset="0.722"/>
+                    <GradientStop Color="#FF0201FF" Offset="0.899"/>
+                </LinearGradientBrush>
+            </TextBox.Foreground>
+        </TextBox>
+        <Label Content="length" HorizontalAlignment="Left" Margin="212,72,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-89.852"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Rectangle Fill="White" HorizontalAlignment="Left" Height="13" Margin="20,103,0,0" Stroke="White" VerticalAlignment="Top" Width="348"/>
+        <Button x:Name="close" Content="Go to Bed" HorizontalAlignment="Left" Height="31" Margin="196,116,0,0" VerticalAlignment="Top" Width="101" Click="Button_Click"/>
+        <Button x:Name="process" Content="Let it rip!" HorizontalAlignment="Left" Height="31" Margin="76,116,0,0" VerticalAlignment="Top" Width="101" Click="process_Click"/>
+
+    </Grid>
+</Window>

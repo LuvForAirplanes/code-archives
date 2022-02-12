@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Kendra AI
+    </title>
+    <LINK href="kendraStyle.css" rel="Stylesheet" type="text/css">
+</head>
+<body bgcolor="black" class="bf">
+    <script>
+        //if (document.cookie.indexOf("success") == -1) {
+        //    document.location.replace("sign-in.html");
+        //}
+            
+        document.cookie = "";
+    </script>
+    <DIV class="leftblk">
+        <DIV class="logo">
+            <IMG src="logo.jpg">
+        </DIV>
+        <H3 class="domain_name">micah.com</H3>
+    </DIV>
+    <form class="middle" name="form1" id="form1">
+        
+        <textarea id="in-text" class="kwd_bloack" rows="2" cols="15"></textarea><textarea id="out-text" class="out-text" rows="2" cols="15"></textarea>
+        <input type="button" id="process" onclick="startFragment()" class="button-process" value="Process" />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <h2 class="p">Controls</h2>
+        <hr>
+        <input type=button value=Start id=start class=button onclick="getTime()" /><br /><br /><br />
+        <input type=button value=Pause id=pause class=button onclick="alert('Not currently activated')" /><br /><br /><br />
+        <input type=button value=Stop id=stop class=button onclick=stopIt() /><br /><br /><br />
+        <h3 class="p">Start-up Nodes:</h3>
+        <textarea id="startNueron" class="startup" cols="15" rows="2" name="startNode">0</textarea><br /><br /><br /><textarea class="startup" id="startValue" cols="15" rows="2" name="startValue">200</textarea><br />
+        <br /><br />
+        <p class="p"><input class="tf" type="checkbox" id="test-tf" checked="checked"/>Cancel Interval after empty</p> 
+        <p class="p">Fire every <input type=text id=timeInput class="secondsInput" value="2000"/>milliseconds</p>
+        <br />
+        <textarea id="output" cols="50" rows="10" class="output"></textarea>
+        <script src="kendra.js"></script>
+        <script src="dictionaryIndexer.js"></script>
+        <script src="fragmenter.js"></script>
+        <script>
+function passToCom(FragCompArray) {
+var finishedArrayCom = runIndexer(FragCompArray)//.match(regExp);
+var lh = finishedArrayCom.length;
+do {
+    valueArray.push("200");
+    lh--;
+} while (lh > 1);
+    //processItems.push(parseInt(finishedArrayCom[0])); //!!!
+for (var loopConcat in finishedArrayCom) {
+	if( finishedArrayCom[loopConcat] != -1) {
+    processItems.push(finishedArrayCom[loopConcat]);
+} else {
+write("Word: " + FragCompArray[loopConcat] + ", was not recognized");
+}
+}
+}
+function outText(text) {
+text = string[text];
+document.getElementById("out-text").value += text;
+}
+function stopIt() {
+    clearInterval(timer1);
+}
+function write(text) {
+    document.getElementById("output").value += text + "\n";
+}
+        </script>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+<h3 class="p">Add Word</h3>
+<script>
+function go() {
+var newer = document.getElementById("new").value;
+string.push(newer);
+write("Word: " + newer + ", was successfully added-index number:"  + string.indexOf(newer));
+}
+</script>
+<textarea rows=1 cols=10 id=new class="new"></textarea>
+<br /><br />
+<input type=button  onclick="go()" class=button value="Add Word" />
+<br /><br /><br /><br />
+ <textarea id="nodes" rows="10" cols = "20" class="secondsInput"></textarea>
+    </form>
+<script>
+var t = new Date();
+write("Kendra load time: " + t + "\nReady for unload");
+
+var RegExp = /\+(\w)+\+/g;
+var username = document.cookie.match(RegExp);
+    username[0].replace("+", "");
+write("Thank-you for logging on " + username);
+</script>
+</body>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="blessbe" xml:space="preserve">
+    <value>             Blessed Be the Name            Christian Hymnal 3          1. All praise to him who reigns above in majesty supreme who gave his son for man to die that he might man redeem. 2. His name above all names shall stand exalted more and more at God the Fathers own right hand where angels host adore. 3. Redeemer saviour friend of man once ruined by the fall thou hast devised salvations plan for thou hast died for all. 4. His name shall be the counselor the mighty prince of peace of all earths kingdoms conqueror whose reign shall never cease. Chorus:  Blessed be the name blessed be the name blessed be name of the lord blessed be the name blessed be the name blessed be name of the lord.</value>
+  </data>
+  <data name="blessedjeh" xml:space="preserve">
+    <value>                Bless Jehovah           Christian Hymnal 2               1. O my soul bless thou Jehova all within me bless his name bless jehovah and forget not all his mercies to proclaim. 2. Who forgives all my transgressions thy diseases all who heals who redeams thee from destruction who with thee so kindly deals. 3. Who with tender mercies crowns thee who with good things fill thy mouth so that even like an eagle thou hast been restored to youth. 4. In his righteousness jehovah will deliver those distressed he will execute just judgement in the cause of all oppressed. 5. For as high as is the heaven far above the earth below ever great to them that fear him is the mercy he will show. Chorus: Bless jehovah all his creatures ever under his control all thro out his vast dominion bless jehovah o my soul.</value>
+  </data>
+  <data name="comethou" xml:space="preserve">
+    <value>  Come Thou Almighty King         Christian Hymnal 1         1. Come thou almighty king help us thy name to sing help us to praise father all glorious oer all victorious come and reign over us ancient of days. 2. Come thou incarnate word gird on thy mighty sword our prayer attend come and thy people bless and give thy word success spirit of holiness on us descend. 3. Come holy comforter thy sacred witness bear in this glad hour thou who our mighty art now rule in every heart and neer from us depart spirit of power. 4. To the great one in three eternal praises be hence ever more his sovereign majesty may we in glory see and to eternity love and adore.</value>
+  </data>
+  <data name="glorytohis" xml:space="preserve">
+    <value>              Glory to His Name           Christian Hymnal 4             1. Down at the cross where my saviour died down where for cleansing from sin i cried there to my heart was blood applied glory to his name i am so wondrously saved from sin jesus so sweetly abides within there at the cross where he took me in glory to his name oh precious fountain that saves from sin i am so glad i entered in there jesus saves me and keeps me clean glory to his name come to this fountain so rich and sweet cast thy poor soul at the saviours feet plunge in today and be made complete glory to his name glory to his name glory to his name there to his heart was blood applied glory to his name</value>
+  </data>
+  <data name="s" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s10" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s11" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s12" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s13" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s7" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s8" xml:space="preserve">
+    <value />
+  </data>
+  <data name="s9" xml:space="preserve">
+    <value />
+  </data>
+  <data name="singabout" xml:space="preserve">
+    <value>                             Sing About Jesus    Christian Hymnal 5          1. Sing about Jesus who died to save who for my soul his life he gave sing for hes reigning above the grave. 2. Sing about Jesus He took me in sing of his power he saves from sin sing of his grace he keeps  me clean. 3. Sing about jesus our righteousness sing for he came my soul to bless while i with gladness his name confess. 4. sing about jesus both day and night this is my theme my hearts delight sing in the spirit for it is right. Sing about him, yes, sing about him sing about jesus my loving lord sing about him sing about him sing of his goodness in sweet accord sing about him yes sing about him.</value>
+  </data>
+  <data name="worthyart" xml:space="preserve">
+    <value>          Worthy Art Thou, Lord Divine   Christian Hymnal 6       1. Worthy art thou lord divine to recieve this praise of mine to recieve this grateful praise of mine mercy hast thou shown to me and my soul delights in thee joyfully my soul delights in thee 2. From the dawn of my first day thou hast lead me all the way guided loved and kept me all the way and thy life blood thou didst give that forever I may live that with thee forever I may live 3. All my guilt thou didst remove  in thy great redeeming love through thy great redeeming grace and love 4. And this love so full and free gives me joy to come to thee boldly gladly do I come to thee. Chorus: lord i thank thee for thy love draw my heart to thine above true and faithful would I be Jesus draw me close to thee.</value>
+  </data>
+</root>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<p>Enter source here:</p>
+<input type=text id=input /><br>
+<p>Results will be displayed here</p>
+<iframe id=if src="" ></iframe><br>
+<input type=button id=bt value="Click here when finished"/>
+<script>
+    function tt() {
+    document.getElementById("if").src = document.getElementById("input").value;
+    }
+    document.getElementById("bt").addEventListener("click", tt);
+    </script>
+    </html>

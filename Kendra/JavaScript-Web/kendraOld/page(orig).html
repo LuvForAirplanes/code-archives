@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang = "en">
+    <head>
+        <style>
+            .p p {
+                font-family: "calibri"
+            }
+            body {
+	background: url("") repeat-x rgb(157, 197, 105); font: 13px/1.2em "Lucida Grande", Arial, sans-serif; margin: 10px; padding: 20px; color: rgb(0, 0, 0); font-size-adjust: none; font-stretch: normal;
+}
+.mcb{display:block;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;-moz-border-radius:0px;border:2px solid #f372ab;background:#e53b69;padding:10px;color:#fff;text-align:center;font:16px/18px Helvetica,Arial;text-shadow:0px -1px 1px rgba(0,0,0,0.5);background:-webkit-gradient(linear,left top,left bottom,from(#ef5c91),to(#d82a49));font-weight:bold;text-decoration:none;margin-bottom:15px;}.mcb:hover{background:-webkit-gradient(linear,left top,left bottom,from(#f97eaa),to(#ee4966))!important;color:#fff;}.mcb div{margin:0;}
+            .mcb .large {
+                font-size: 25px;
+                line-height: 29px;
+            }
+            </style>
+        <title>Kendra - AI</title>
+        <script src=prototype.js></script>
+        <script src=scriptaculous.js></script>
+        <script src=unittest.js></script>
+    </head>
+    <body id=bodyPage bgcolor="green" onload="Effect.Grow('logo');; return false;"onunload="Effect.Fade('bodyPage');; return false;">
+
+<img src=logo.jpg id=logo />
+
+        <form name="form1">
+<p>Input:</p>
+<textarea rows="10" cols="50" name="input" id=text ></textarea>
+<input type=button id=process class = mcb value=Process onclick="" /></form> 
+<br>
+<br>
+<br>
+<h2 class=p >Pre-run Test</h2>
+<hr>
+<input type=button value="Start Pre-Run Test" id=startPrerun class=mcb />
+<br>
+<h2 >Controls</h2>
+<hr>
+
+<input type=button value=Start id=start class=mcb onclick="getTime()"/>
+<input type=button value=Pause id=pause class=mcb onclick="alert('Not currently activated')"/>
+<input type=button value=Stop id=stop class=mcb onclick="stop()"/> 
+        <h3>Start-up Nodes:</h3>
+        <textarea id="startNueron"></textarea><br /><br /><textarea id="startValue"></textarea>
+<br>
+<p>Fire every <input type=text id=timeInput />seconds</p>
+        <br />
+        <br />
+        <textarea id="output" cols="50" rows="20" ></textarea>
+<script>
+function passToCom(FragCompArray) {
+var finishedArrayCom = runIndexer(FragCompArray).match(regExp);
+var lh = finishedArrayCom.length;
+do {
+    valueArray.push(200);
+    lh--;
+} while (lh > 0);
+processItems.concat(finishedArrayCom);
+}
+</script>
+<script src=dictionaryIndexer.js ></script>
+        <script src="fragmenter.js"></script>
+<script src="kendra.js"></script>
+</body>
+</html>

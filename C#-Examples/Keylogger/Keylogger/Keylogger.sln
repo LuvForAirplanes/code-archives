@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keylogger.Demo", "Keylogger.Demo\Keylogger.Demo.csproj", "{792369FC-BF22-4E88-B63B-A3403EC70730}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keylogger.API", "Keylogger.API\Keylogger.API.csproj", "{10675D12-8315-4A28-B8D0-42FCF3617FB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{792369FC-BF22-4E88-B63B-A3403EC70730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{792369FC-BF22-4E88-B63B-A3403EC70730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{792369FC-BF22-4E88-B63B-A3403EC70730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{792369FC-BF22-4E88-B63B-A3403EC70730}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10675D12-8315-4A28-B8D0-42FCF3617FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10675D12-8315-4A28-B8D0-42FCF3617FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10675D12-8315-4A28-B8D0-42FCF3617FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10675D12-8315-4A28-B8D0-42FCF3617FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {442F5773-7822-44D3-A357-90D748188D14}
+	EndGlobalSection
+EndGlobal

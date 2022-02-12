@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "what": "barber",
+    "where": "Canada",
+    "latitude": "",
+    "longitude": "",
+    "firstListing": 1,
+    "lastListing": 1,
+    "totalListings": 7787,
+    "pageCount": 7787,
+    "currentPage": 1,
+    "listingsPerPage": 1
+  },
+  "listings": [
+    {
+      "parentId": "",
+      "isParent": false,
+      "distance": "",
+      "content": {
+        "Video": {
+          "avail": false,
+          "inMkt": false
+        },
+        "Photo": {
+          "avail": false,
+          "inMkt": false
+        },
+        "Profile": {
+          "avail": true,
+          "inMkt": false
+        },
+        "DspAd": {
+          "avail": true,
+          "inMkt": false
+        },
+        "Url": {
+          "avail": false,
+          "inMkt": false
+        },
+        "Logo": {
+          "avail": false,
+          "inMkt": false
+        }
+      },
+      "id": "113187",
+      "name": "Askada Hair Group",
+      "address": {
+        "street": "",
+        "city": "",
+        "prov": "",
+        "pcode": ""
+      },
+      "geoCode": null
+    }
+  ]
+}
+

@@ -1,0 +1,242 @@
+﻿@page
+@model ChurchDirectory.WebApp.Pages.FamiliesModel
+@{
+    ViewData["Title"] = "Family";
+}
+
+<style>
+    .print-btn-padding {
+        margin-right: 7px;
+    }
+
+    .p {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .amper {
+        font-size: 40px;
+        color: teal;
+    }
+
+    .comments {
+        resize: none;
+    }
+
+    .segment-min-height {
+        min-height: 150px;
+    }
+
+    .address-text {
+        font-size: medium;
+    }
+</style>
+<table class="ui celled selectable striped table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Children</th>
+            <th>Married</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var family in Model.Families)
+        {
+            <tr onclick="window.location.href='./Families?id=' + @family.Id">
+                <td>@family.FamilyName</td>
+                <td>1</td>
+                <td>
+                    @if (family.MarriedDate.HasValue)
+                    {
+                        @family.MarriedDate.Value.Date.ToShortDateString();
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.Families.Count == 0)
+{
+    <div style="text-align:center"><p>We didn't find anything to display here.</p></div>
+}
+
+@if (Model.CurrentFamily != null)
+{
+    <div class="ui modal">
+        <i class="close icon"></i>
+        <div class="header">
+            @Model.CurrentFamily.FamilyName
+        </div>
+        <div class="content">
+            <div class="ui grid">
+                <div class="seven wide column">
+                    <div class="ui segment segment-min-height">
+                        <h4>
+                            @(Model.CurrentFamily.FirstName + " " + Model.CurrentFamily.LastName)
+                            @if (Model.CurrentFamily.Member != null)
+                            {
+                                <div class="ui orange label">Member</div>
+                            }
+                        </h4>
+                        <div class="ui image label large">
+                            Birth
+                            <div class="detail">@Model.CurrentFamily.BirthDate.Value.ToShortDateString()</div>
+                        </div>
+                        @if (Model.CurrentFamily.DeathDate != null)
+                        {
+                            <br />
+                            <br />
+                            <div class="ui image label large">
+                                Death
+                                <div class="detail">@Model.CurrentFamily.DeathDate.Value.ToShortDateString()</div>
+                            </div>
+
+                        }
+                        @if (Model.CurrentFamily.Comment1 != null)
+                        {
+                            <br />
+                            <br />
+                            <p>@Model.CurrentFamily.Comment1</p>
+                        }
+                    </div>
+                </div>
+                <div class="two wide column">
+                    <div class="p">
+                        <div class="amper">&</div>
+                        <div>@Model.CurrentFamily.MarriedDate.Value.ToShortDateString()</div>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <div class="ui segment segment-min-height">
+                        <h4>
+                            @(Model.CurrentFamily.Spouse)
+                            @if (Model.CurrentFamily.Member != null)
+                            {
+                                <div class="ui orange label">Member</div>
+                            }
+                        </h4>
+                        <div class="ui image label large">
+                            Birth
+                            <div class="detail">@Model.CurrentFamily.SpouseBirthDate.Value.ToShortDateString()</div>
+                        </div>
+                        @if (Model.CurrentFamily.SpouseDeathDate != null)
+                        {
+                            <br />
+                            <br />
+                            <div class="ui image label large">
+                                Death
+                                <div class="detail">@Model.CurrentFamily.SpouseDeathDate.Value.ToShortDateString()</div>
+                            </div>
+                        }
+
+                        @if (Model.CurrentFamily.Comment2 != null)
+                        {
+                            <br />
+                            <br />
+                            <p>@Model.CurrentFamily.Comment2</p>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="ui grid">
+                <div class="eight wide column">
+                    <div class="ui segment">
+                        <div style="text-align:center">
+                            <h5>Address</h5>
+                            <p class="address-text">@Model.CurrentFamily.Line1</p>
+                            <p class="address-text">@(Model.CurrentFamily.City), @Model.CurrentFamily.State @Model.CurrentFamily.Zip</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eight wide column">
+                    <div class="ui segment">
+                        <h4>Phone & Contact</h4>
+                        <table class="ui table">
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Info</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.CurrentFamily.Phone1 != null)
+                                {
+                                    <tr>
+                                        <td>
+                                            Phone
+                                        </td>
+                                        <td>
+                                            @Model.CurrentFamily.Phone1
+                                        </td>
+                                    </tr>
+                                }
+
+                                @if (Model.CurrentFamily.Phone2 != null)
+                                {
+                                    <tr>
+                                        <td>
+                                            Phone
+                                        </td>
+                                        <td>
+                                            @Model.CurrentFamily.Phone2
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="ui segment">
+                <table class="ui celled selectable striped table">
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Birtdate Name</th>
+                            <th>Spouse</th>
+                            <th>Member</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var child in Model.CurrentFamily.Children)
+                        {
+                        <tr>
+                            <td>@child.Name</td>
+                            <td>@child.BirthDate</td>
+                            <td>@child.Married</td>
+                            @if (child.Member)
+                            {
+                                <td><a class="ui red right ribbon label">Member</a></td>
+                            } else
+                            {
+                                <td></td>
+                            }
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui gray button" onclick="cancel()">
+                Cancel
+            </div>
+            <div class="ui positive icon button">
+                <i class="fa fa-print print-btn-padding"></i>
+                Print
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.ui.modal').modal('show');
+
+        function cancel() {
+            window.location.href = "http://localhost:59261/Families";
+        }
+    </script>
+}

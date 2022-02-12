@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ChurchDirectory.WebApp</title>
+    <link rel="stylesheet" href="~/css/semantic.min.css">
+    <link rel="stylesheet" href="~/css/fontawesome-all.css">
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/semantic-js.js"></script>
+</head>
+<body>
+    <div style="padding:15px;">
+        <div class="ui left demo vertical inverted labeled icon sidebar menu push visible" style="">
+            <a class="item" href="/Families">
+                <i class="fa fa-user fa-lg"></i>
+                <br />
+                <br />
+                Families
+            </a>
+            <a class="item" href="/Children">
+                <i class="fa fa-users fa-lg"></i>
+                <br />
+                <br />
+                Children
+            </a>
+            <a class="item" href="/Ministry">
+                <i class="fa fa-user-tie fa-lg"></i>
+                <br />
+                <br />
+                Ministry
+            </a>
+            <a class="item" href="/AdvancedSearch">
+                <i class="fa fa-search fa-lg"></i>
+                <br />
+                <br />
+                Advanced<br />Search
+            </a>
+        </div>
+        <div style="padding-left:90px;">
+            <div>
+                @RenderBody()
+            </div>
+        </div>
+        @*<hr />
+        <footer>
+            <p>&copy; 2017 - ChurchDirectory.WebApp</p>
+        </footer>*@
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

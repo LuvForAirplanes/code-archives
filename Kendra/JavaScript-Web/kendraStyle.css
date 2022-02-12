@@ -1,0 +1,115 @@
+.new {
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    left:2%;
+    top: 890px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+    scrollbar-base-color: #252525;
+}
+        .middle {
+            background: #252525;
+    position: absolute;
+    left: 10%;
+    top: 13%;
+    width: 80%;
+    height: 1300px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+        }
+        .logo{display: inline-block;vertical-align: middle;padding-right: 5px;}
+        .leftblk {float: left;width: 55%;word-wrap: break-word;overflow: hidden;padding-top: 5px; padding-left: 10%}
+        .kwd_bloack {
+    position: absolute;
+    width: 34%;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    left:15%;
+    top: 60px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+    scrollbar-base-color: #252525;
+}
+.out-text {
+    position: absolute;
+    width: 34%;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    left:53%;
+    top: 60px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+    scrollbar-base-color: #252525;
+}
+        .domain_name{font-family:Calibri;   line-height:normal; font-size:26px; font-weight:normal; color:#fff; display: inline-block;vertical-align: middle;width: 83%}
+        .p {
+            font-family: Calibri;
+            color: #fff;
+            padding-left: 20px;
+        }
+        .button-process {
+            position:absolute;
+            top: 120px;
+            left: 29%;
+            height: 40px;
+            width:80px;
+            background-color: #3e3e42;
+            border:2px solid #1f1f1f;
+            color: whitesmoke;
+            border-radius:15px;
+            }
+        .startup {
+            position: absolute;
+            left: 20px;
+    width: 34%;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+    scrollbar-base-color: #252525;
+        }
+        .button {
+            position: absolute;
+            left: 20px;
+            height: 40px;
+            background-color: #3e3e42;
+            border:2px solid #1f1f1f;
+            color: whitesmoke;
+            border-radius:15px;
+        }
+        .startPrerun {
+            position: absolute;
+            top: 170px;
+            left: 41%;
+        }
+        .secondsInput {
+            border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+        }
+        .output{position: absolute;
+    width: 45%;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    left:20px;
+    top: 710px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: small;
+    scrollbar-base-color: #252525;
+        }
+        .tf {
+            padding: 50px;
+        }

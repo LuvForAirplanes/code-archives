@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+
+
+<div class="ui segment" id="example1">
+  <div class="left ui rail" style="">
+    <p></p>
+    <p></p>
+    <p></p>
+    <div class="ui sticky" style="width: 272px !important; height: 262.531px !important; left: 267.5px;">
+      <h3 class="ui header">Stuck Content</h3>
+      <img>
+    </div>
+  </div>
+  <div class="right ui rail" style="">
+    <div class="ui sticky" style="width: 272px !important; height: 262.531px !important; left: 1349.5px;">
+      <h3 class="ui header">Stuck Content</h3>
+      <img>
+    </div>
+  </div>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+  <p></p>
+</div>
+
+<script>
+$('.ui.sticky')
+  .sticky({
+    context: '#example1'
+  })
+;
+    </script>

@@ -1,0 +1,27 @@
+CREATE TABLE public.books
+(
+  id bigint NOT NULL,
+  title text,
+  isbn text,
+  series text,
+  author text,
+  publisher text,
+  printdate text,
+  copyright text,
+  grade text,
+  rating text,
+  hamlin boolean,
+  cedarrun boolean,
+  hegins boolean,
+  status text,
+  statusdate text,
+  notes text,
+  category text,
+  libraryofcongressid text,
+  CONSTRAINT pk_books PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.books
+  OWNER TO postgres;

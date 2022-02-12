@@ -1,0 +1,37 @@
+@model ChurchDirectory.WebApp.ViewComponents.PagerViewComponent
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<div class="row">
+  <div class="flex-column grow"></div>
+  @if (Model.PageIndex > 1)
+  {
+    <div class="flex-column">
+      <div class="ui pagination menu">
+        <a class="icon item" href="@Model.GetPageUrl(Model.PageIndex - 1)">
+          <i class="left chevron icon"></i>
+        </a>
+      </div>
+    </div>
+  }
+  <div class="flex-column xs-ml-10 xs-mr-10">
+    Page
+  </div>
+  <div class="flex-column">
+    <div class="ui input">
+      <input asp-for="PageIndex" class="page-index-input" />
+    </div>
+  </div>
+  <div class="flex-column xs-ml-10 xs-mr-10">
+    of @Model.PageCount
+  </div>
+  @if (Model.PageIndex < Model.PageCount)
+  {
+    <div class="flex-column">
+      <div class="ui pagination menu">
+        <a class="icon item" href="@Model.GetPageUrl(Model.PageIndex + 1)">
+          <i class="right chevron icon"></i>
+        </a>
+      </div>
+    </div>
+  }
+</div>

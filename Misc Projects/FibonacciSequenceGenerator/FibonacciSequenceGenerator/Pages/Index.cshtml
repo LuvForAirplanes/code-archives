@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<style>
+    .generate-button {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #genCode {
+        background-color: #2196F3;
+        color: #ffffff;
+        font-size: 15px;
+        border: 0px;
+        padding: 5px;
+    }
+
+    #output {
+        height: 400px;
+        width: 600px;
+    }
+</style>
+<br />
+<p>Enter below the length of the sequence to generate:</p>
+<input type="text" id="numberOfSeq" />
+<br />
+<div class="generate-button">
+    <input type="button" id="genCode" value="Generate Sequence" />
+</div>
+<script>
+    function goGet() {
+        var max = document.getElementById("numberOfSeq").value;
+
+        if (max == "") {
+            alert("Please enter the number of sequences you want generated.");
+        }
+
+        var addend1 = 0;
+        var addend2 = 1;
+        var sum = 1;
+
+        var final = "";
+        for (var i = 0; i < max; i++) {
+            final += sum + "\n";
+            addend1 = addend2;
+            addend2 = sum;
+            sum = addend1 + addend2;
+        }
+        document.getElementById("output").value = final;
+    }
+
+    document.getElementById("genCode").addEventListener("click", goGet);
+</script>
+<p>Result:</p>
+<textarea id="output" readonly></textarea>

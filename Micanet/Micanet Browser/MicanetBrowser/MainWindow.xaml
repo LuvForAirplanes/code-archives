@@ -1,0 +1,15 @@
+﻿<Window x:Class="MicanetBrowser.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MicanetBrowser"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="address" Margin="0,2,0.4,0" TextWrapping="Wrap" Text="micanet.mn" KeyUp="address_keyUp" Height="26" VerticalAlignment="Top"/>
+        <WindowsFormsHost x:Name="WindowsFormsHoster" Margin="0,28,-3.6,-0.2"/>
+
+    </Grid>
+</Window>
+    

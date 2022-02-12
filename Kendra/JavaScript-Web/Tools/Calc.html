@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>Basic calculator</title>
+        <style>
+            .mcb{border-radius:15px;border:2px solid #f372ab;background:#e53b69;padding:15px;color:#fff;
+            text-align:center;font:16px/18px Helvetica,Arial;text-shadow:0px -1px 1px rgba(0,0,0,0.5);
+            background:font-weight:bold;margin-bottom:5px;margin-left:5px;}
+            .me {
+
+            }
+</style>
+    </head>
+    <body>
+        <textarea id=nums cols=20 rows=4></textarea>
+        <br>
+        <br>
+        <button class=mcb id=b1 onclick="addNum(event)">1</button><button class=mcb id=b2 onclick="addNum(event)">2</button><button class=mcb id=b3 onclick="addNum(event)">3</button>
+        <br>
+        <button class=mcb id=b4 onclick="addNum(event)">4</button><button class=mcb id=b5 onclick="addNum(event)">5</button><button class=mcb id=b6 onclick="addNum(event)">6</button>
+        <br>
+        <button class=mcb id=b7 onclick="addNum(event)">7</button><button class=mcb id=b8 onclick="addNum(event)">8</button><button class=mcb id=b9 onclick="addNum(event)">9</button>
+        <br>
+        <button class=mcb id=b0 onclick="addNum(event)">0</button><button class=mcb id=b00 onclick="addNum(event)">00</button><button class=mcb id=b. onclick="addNum(event)">.</button>
+        <br>
+        <br>
+        <button class=mcb id=plus onclick="numeric(event)">+</button><button class=mcb id=minus onclick="numeric(event)">-</button><button class=mcb id=multi onclick="numeric(event)">*</button><button class=mcb id=divide onclick="numeric(event)">/</button><button class=mcb id=equal onclick="equal(event)">=</button>
+        <script>
+            var nums = [];
+            var calc = [""];
+            var current = "";
+             function addNum(e) {
+                 var regExp = /\d/
+                var target = e.target.id;
+                if(target == "b00") {
+                    current += "00"
+                }
+                else {
+                target = target.match(regExp);
+                current += target;
+                }
+                alert(current);
+            }
+           function numeric(e) {
+               var regExp = /\d/
+               var target = e.target.id;
+               alert(target);
+               nums.push(current);
+               current = "";
+                calc.push(target);
+                alert(target);
+            }
+            function equal(e) {
+                var total = 0;
+                alert("WOW");
+                for(var loop in nums) {
+                    alert("WHY");
+                    loop++;
+                    alert("WE");
+                    switch(calc[loop]) {
+                        case "plus":
+                        alert(loop);
+                            total += parseInt(nums[loop--]) + parseInt(nums[loop]);
+                            alert(total);
+                            break;
+                        case "minus":
+break;
+                        case "divide":
+break;
+                        case "multi":
+                        break;
+                    }
+                }
+            }
+            </script>
+    </body>
+</html>

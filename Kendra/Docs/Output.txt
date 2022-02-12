@@ -1,0 +1,46 @@
+//output wihout matching textarea
+Kendra load time: Wed May 31 2017 15:44:19 GMT-0400 (Eastern Daylight Time)
+Ready for unload
+Thank-you for logging on +micahs+
+Timer was set for 2000 milliseconds
+Entering count()
+1
+Item(s) to be processed: 1
+id: 0; item0: 1
+Node 3 was reached and activated
+0
+1
+300
+Entering count()
+1
+Item(s) to be processed: 1
+id: 1; item0: 
+
+
+
+Entering count()
+0
+Item(s) to be processed: 0
+
+//output with matching node textarea
+
+Timer was set for 2000 milliseconds
+Entering count()
+1
+Item(s) to be processed: 1
+id: 0; item0: 1
+Node 3 was reached and activated
+0
+1
+300
+Entering count()
+1
+Item(s) to be processed: 1
+id: 1; item0: 3
+
+
+Entering count()
+0
+Item(s) to be processed: 0
+
+

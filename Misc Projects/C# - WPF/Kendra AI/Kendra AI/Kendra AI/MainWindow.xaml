@@ -1,0 +1,85 @@
+﻿<Window x:Name="form1" x:Class="Kendra_AI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kendra_AI"
+        mc:Ignorable="d"
+        Title="Kendra AI" Height="489" Width="312" WindowStyle="None" Background="#FF333333" MouseLeave="Grid_MouseLeave" ResizeMode="NoResize" WindowStartupLocation="Manual" Loaded="windowload">
+    <Grid HorizontalAlignment="Left" Width="312" Background="#FF181818" RenderTransformOrigin="0.509,0.504" Margin="0,0,0,-1" >
+        <TextBox x:Name="texter" HorizontalAlignment="Left" Height="191" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="186" Visibility="Hidden"/>
+        <Grid HorizontalAlignment="Left" Height="490" VerticalAlignment="Top" Width="40" Background="#FF141414">
+            <Label x:Name="label" Content="|" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,-9,0,0" Foreground="#FFF0EFF1" FontWeight="Bold" Height="39" Width="18" FontSize="20" FontFamily="Calibri Light" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="89.882"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="label_Copy" Content="|" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="9,-2,0,0" Foreground="#FFF0EFF1" FontWeight="Bold" Height="39" Width="18" FontSize="20" FontFamily="Calibri Light" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="89.882"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Label x:Name="label_Copy1" Content="|" VerticalAlignment="Top" Margin="9,5,13,0" Foreground="#FFF0EFF1" FontWeight="Bold" Height="39" FontSize="20" FontFamily="Calibri Light" RenderTransformOrigin="0.5,0.5">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="89.882"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Rectangle HorizontalAlignment="Left" Height="15" Stroke="#FFF0EFF1" VerticalAlignment="Top" Width="15" Margin="11,47,0,0" OpacityMask="Black" StrokeStartLineCap="Round" RenderTransformOrigin="0,0" StrokeDashOffset="8" UseLayoutRounding="False">
+                <Rectangle.Fill>
+                    <SolidColorBrush Opacity="0" Color="#FFF0EFF1"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle HorizontalAlignment="Left" Height="15" Stroke="#FFF0EFF1" VerticalAlignment="Top" Width="15" Margin="16,51,0,0" OpacityMask="Black" StrokeStartLineCap="Round" RenderTransformOrigin="0,0" StrokeDashOffset="8" UseLayoutRounding="False">
+                <Rectangle.Fill>
+                    <SolidColorBrush Opacity="0" Color="#FFF0EFF1"/>
+                </Rectangle.Fill>
+            </Rectangle>
+        </Grid>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="35" Click="button_Click" ClickMode="Press">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="label1" Content="Hi there, Micah!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="91,78,0,0" Foreground="#FF999999" FontSize="20"/>
+        <Label x:Name="message" Content="You need to talk with the &#xA;Microsoft admin in 5 &#xA;minutes. Also, remember &#xA;Mom's birthday cake!" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="58,115,0,0" Foreground="White" FontSize="20" Height="149" Width="253"/>
+        <Ellipse x:Name="ring1" HorizontalAlignment="Left" Height="48" Margin="133,18,0,0" Stroke="#FF707070" VerticalAlignment="Top" Width="48" StrokeThickness="6">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="#FFF4F4F5" Opacity="0"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Ellipse x:Name="ring2" HorizontalAlignment="Left" Height="58" Margin="128,13,0,0" Stroke="#FF3F3F46" VerticalAlignment="Top" Width="58" StrokeThickness="6">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="#FFF4F4F5" Opacity="0"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Button x:Name="button_Copy" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="35" Click="button1_Click" ClickMode="Press" Margin="0,40,0,0">
+            <Button.BorderBrush>
+                <SolidColorBrush Color="#FF707070" Opacity="0"/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <SolidColorBrush Color="#FFDDDDDD" Opacity="0"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="output" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Margin="0,456,0,0" Foreground="#FFF3F3FB" Background="#FF1B1B1F" BorderBrush="#FF181818" SpellCheck.IsEnabled="True" FontSize="16" Padding="0,3,0,0" VerticalScrollBarVisibility="Auto"/>
+        <Grid HorizontalAlignment="Left" Height="100" Margin="326,389,-114,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="button1" Content="U" Margin="285,456,0,0" VerticalAlignment="Top" Height="34" Background="#FF1B1B1F" FontSize="20" Foreground="#FF999999" BorderBrush="#FF1B1B1F" Click="button1_Click_1"/>
+    </Grid>
+</Window>

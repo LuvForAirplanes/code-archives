@@ -1,0 +1,68 @@
+﻿<Window x:Class="Library_Books.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library_Books"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="339" Width="371.103">
+    <Grid Margin="35,9,19,86" RenderTransformOrigin="0.5,0.5">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.282"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Label x:Name="label" Content="I'm Thinkin..." HorizontalAlignment="Left" VerticalAlignment="Top" Height="44" Width="143" Margin="89,0,0,0" FontSize="18"/>
+        <Label x:Name="label1" Content="1. Think of something you might eat." HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,49,0,0" Width="295" Grid.RowSpan="2"/>
+        <Label x:Name="label1_Copy" Content="2. What color is your item?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,82,0,0" Width="295" Grid.RowSpan="2"/>
+        <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="162,85,0,0" Grid.RowSpan="2">
+            <ComboBoxItem Content="Red" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Orange" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Yellow" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Green" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Blue" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Purple" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="White" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Gray" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Black" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Label x:Name="label2" Content="3. How large is it?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,46,0,0" Grid.Row="1"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="123" Margin="109,48,0,0" Grid.Row="1">
+            <ComboBoxItem Content="Large (as in a desk)" HorizontalAlignment="Left" Width="126"/>
+            <ComboBoxItem Content="Medium" HorizontalAlignment="Left" Width="126"/>
+            <ComboBoxItem Content="Small" HorizontalAlignment="Left" Width="126"/>
+            <ComboBoxItem Content="Smaller (as in an staple)" HorizontalAlignment="Left" Width="126"/>
+        </ComboBox>
+        <Label x:Name="label3" Content="4. What shape would you describe it as?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,75,0,0" Grid.Row="1"/>
+        <ComboBox x:Name="comboBox3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="222,76,0,0" Grid.Row="1">
+            <ComboBoxItem Content="Square" HorizontalAlignment="Left" Width="88"/>
+            <ComboBoxItem Content="Rectangle" HorizontalAlignment="Left" Width="88"/>
+            <ComboBoxItem Content="Circle" HorizontalAlignment="Left" Width="88"/>
+            <ComboBoxItem Content="Triangle" HorizontalAlignment="Left" Width="88"/>
+            <ComboBoxItem Content="Oval" HorizontalAlignment="Left" Width="88"/>
+        </ComboBox>
+        <Label x:Name="label4" Content="5. What does the outside feel like?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,101,0,0" Grid.Row="1"/>
+        <ComboBox x:Name="comboBox4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Margin="196,101,0,0" Grid.Row="1">
+            <ComboBoxItem Content="Smooth" HorizontalAlignment="Left" Width="89"/>
+            <ComboBoxItem Content="Soft" HorizontalAlignment="Left" Width="89" />
+            <ComboBoxItem Content="Hard" HorizontalAlignment="Left" Width="89"/>
+            <ComboBoxItem Content="Rough" HorizontalAlignment="Left" Width="89"/>
+        </ComboBox>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="122,180,0,-64" Grid.Row="1" Click="button_Click_1" Height="27"/>
+        <Label x:Name="label5" Content="6. What flavor does it have?" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,132,0,-26" Grid.Row="1" Height="37"/>
+        <ComboBox x:Name="comboBox5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="161,132,0,-23" Grid.Row="1">
+            <ComboBoxItem Content="Sweet" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Sour" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Sharp" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Bland" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Tart" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+    </Grid>
+</Window>

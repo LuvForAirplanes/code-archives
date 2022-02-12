@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang=en >
+    <head>
+        <title></title>
+    </head>
+        <body>
+            <div>
+                <button id=playbackController >Play</button>
+            </div>
+            <audio id=bbbVideo >
+                <source src=StartMenu_Win10.mp4  />
+            </audio>
+            <script>
+            function playbackClick(e) {
+                var target = e.target;
+                var video = document.getElementById("bbbVideo");
+
+                video.play();
+                    }
+                    document.getElementById("playbackController").addEventListener("click", playbackClick);
+                    </script>
+        </body>
+</html>

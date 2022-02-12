@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Kendra Sign-in</title>
+    <style>
+        .middle {
+            background: #252525;
+    position: absolute;
+    left: 10%;
+    top: 13%;
+    width: 80%;
+    height: 80%;
+    background-repeat: no-repeat;
+    background-size: 50%;
+        }
+        .leftblk {float: left;width: 55%;word-wrap: break-word;overflow: hidden;padding-top: 5px; padding-left: 10%}
+        .domain_name{font-family:Calibri;   line-height:normal; font-size:26px; font-weight:normal; color:#fff; display: inline-block;vertical-align: middle;width: 83%}
+.logo{display: inline-block;vertical-align: middle;padding-right: 5px;}
+    .sheet {
+       position: absolute;
+        left: 30%;
+        top: 20%;
+        width: 30%;
+        height: 200px;
+        background-color: grey
+    }
+    .p {
+            font-family: Calibri;
+            color: #fff;
+            padding-left: 20px;
+        }
+    .button {
+            position: absolute;
+            left: 130px;
+            height: 40px;
+            background-color: #3e3e42;
+            border:2px solid #1f1f1f;
+            color: whitesmoke;
+            border-radius:15px;
+        }
+    .new {
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    left:2%;
+    top: 890px;
+    background: #252525;
+    color: whitesmoke;
+    font-family:Calibri;
+    font-size: large;
+    scrollbar-base-color: #252525;
+    vertical-align: central
+}
+        </style>
+</head>
+<body bgcolor="black">
+    <DIV class="leftblk">
+        <DIV class="logo">
+            <IMG src="logo.jpg">
+        </DIV>
+        <H3 class="domain_name">micah.com</H3>
+    </DIV>
+    <div class="middle">
+        <div class="sheet">
+            <script>
+                function signin() {
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+                    var usernames = "micahs";
+          
+                    if (usernames.indexOf(username) != -1 && password == "micah1031") {
+                        document.location.replace("page.html");
+                        document.cookie = "logon=success username=" + "+" + username + "+" + "; expires=1 Jan 3000 00:00:00 GMT;"
+                } else {
+                document.location.replace("sorry.html");
+                }
+//document.location.replace("page.html");
+             }
+           </script>
+            <p class="p">Username:<input type="text" id="username" class="new" /></p><br />
+            <p class="p">Password:<input type="text" id="password" class="new" />:</p><br />
+            <input type="button" class="button"onclick="signin()" value="Sign-in"/>
+        </div>
+    </div>
+</body>
+</html>
